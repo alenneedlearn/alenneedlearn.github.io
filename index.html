@@ -46,14 +46,21 @@
 
   <title>xinuan2k25</title>
   
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X19CVVST2R"></script>
     <script>
-      if (CONFIG.hostname === location.hostname) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-X19CVVST2R');
+      function sendPageView() {
+        if (CONFIG.hostname !== location.hostname) return;
+        var uid = localStorage.getItem('uid') || (Math.random() + '.' + Math.random());
+        localStorage.setItem('uid', uid);
+        navigator.sendBeacon('https://www.google-analytics.com/collect', new URLSearchParams({
+          v  : 1,
+          tid: 'G-X19CVVST2R',
+          cid: uid,
+          t  : 'pageview',
+          dp : encodeURIComponent(location.pathname)
+        }));
       }
+      document.addEventListener('pjax:complete', sendPageView);
+      sendPageView();
     </script>
 
 
@@ -107,7 +114,7 @@
       <h1 class="site-title">xinuan2k25</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">還迎來到我的網站</p>
+      <p class="site-subtitle" itemprop="description">歡迎來到我的網站</p>
   </div>
 
   <div class="site-nav-right">
