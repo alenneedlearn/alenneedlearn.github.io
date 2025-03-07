@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://alenneedlearb.github.io/sitemap.xml
+Sitemap: https://alenneedlearn.github.io/sitemap.xml
