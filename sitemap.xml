@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://alenneedlearn.github.io/about/index.html</loc>
+    <loc>https://alenneedlearn.github.io/404/index.html</loc>
     
     <lastmod>2025-03-14</lastmod>
     
@@ -13,7 +13,16 @@
   <url>
     <loc>https://alenneedlearn.github.io/2025/03/04/first/</loc>
     
-    <lastmod>2025-03-07</lastmod>
+    <lastmod>2025-03-14</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://alenneedlearn.github.io/about/index.html</loc>
+    
+    <lastmod>2025-03-14</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
